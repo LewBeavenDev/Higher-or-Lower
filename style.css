@@ -50,7 +50,7 @@ body {
     align-items: center;
 }
 
-.numberResult {
+.currentCard {
     border: 3px solid white;
     width: min-content;
     height: min-content;
@@ -58,26 +58,10 @@ body {
 }
 
 .buttonsContainer {
-    border: 3px solid white;
-}
-
-.buttonsRow {
-    border: 1px solid white;
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem;
-}
-
-.buttonsRow1 {
-    width: 22rem;
-    margin: 0 auto;
-    border: 1px solid white;
-    display: flex;
-    justify-content: space-between;
-}
-
-.rowItem {
-    border: 1px solid white;
+    /* border: 3px solid white; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .btn {
@@ -85,4 +69,6 @@ body {
     width: 5rem;
     border: 3px solid black;
     border-radius: 1rem;
+    margin-inline: auto;
 }
+
