@@ -16,12 +16,7 @@ let ranks = [
   "ace",
 ];
 let suits = ["spades", "clubs", "hearts", "diamonds"];
-
-// Get card score?
-// let cardScore = 0;
-// for (let i = 1; i <= ranks.length; i++){
-//   cardScore += 1;
-// }
+let discardedCards = [];
 
 // Function loops through 'ranks' and 'suits' array and populates a new array (deck).
 function createDeck() {
@@ -48,16 +43,18 @@ function shuffleDeck() {
 // Initialise Game
 
 function initGame() {
+  deck = [];
+  discardedCards = [];
   createDeck();
   shuffleDeck();
-  return deck;
+  dealNewCard();
 }
 
 initGame();
-let discardedCards = [];
 
 // Dealing new card
 function dealNewCard() {
+  // with a full deck just deals the top card
   if (deck.length === 52) {
     card = deck.pop();
     console.log(card);
@@ -65,25 +62,37 @@ function dealNewCard() {
       ".currentCard"
     ).src = `./assets/PNG-cards-1.3/${card}.png`;
     document.querySelector(".currentCard").alt = `${card}`;
-  } else {
+  } // if there are cards left to be dealt, puts current card in the discard array and deals a new card
+  else if (deck.length < 52 && deck.length >= 1) {
     discardedCards.push(card);
-    console.log(discardedCards);
+    console.log(`Discard pile: ${discardedCards}`);
     card = deck.pop();
-    console.log(`current card is ${card}`);
+    console.log(`current card is ${card} `);
     document.querySelector(
       ".currentCard"
     ).src = `./assets/PNG-cards-1.3/${card}.png`;
     document.querySelector(".currentCard").alt = `${card}`;
+  } // if there are no more cards to be dealt, game ends and game re initialises
+  else {
+    console.log("Game Over");
+    initGame();
   }
 }
 
-dealNewCard();
-// This block assigns the dealt card the correct image
+// upon higher button press, check if card was higher than the last, if so add bet amount * 2 to total score
+function checkHigherResult() {
+  if (card > discardedCards.length(-1)) {
+    totalScore += betAmount * 2;
+  } else {
+    totalScore -= betAmount;
+  }
+}
 
-// function dealNewCard() {
-//   discardedCards.push(currentCard);
-//   console.log(discardedCards);
-
-// }
-
-// dealNewCard();
+// upon lower button press, check if card was lower than the last, if so add bet amount * 2 to total score
+function checkLowerResult() {
+  if (card < discardedCards.length(-1)) {
+    totalScore += betAmount * 2;
+  } else {
+    totalScore -= betAmount;
+  }
+}
