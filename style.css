@@ -1,74 +1,73 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
 }
 
 button {
-    background-image: none;
-    border: none;
-    background-color: transparent;
-    color: inherit;
+  background-image: none;
+  border: none;
+  background-color: transparent;
+  color: inherit;
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
-    color: white;
-    background-color: #000;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  background-color: #000;
 }
 
 .title {
-    text-align: center;
-    margin: 100px ;
+  text-align: center;
+  margin: 100px;
 }
 
 .felt {
-    border: 3px solid white;
-    width: 30rem;
-    border-radius: 1rem;
-    background-color: #1d831d;
-    margin: 0 auto;
-    padding: 0.5rem 2rem;
-    text-align: center;
+  border: 3px solid white;
+  width: 30rem;
+  border-radius: 1rem;
+  background-color: #1d831d;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  text-align: center;
 }
 
 .cardContainer {
-    background-color: #000;
-    border: 3px solid white;
-    border-radius: 0.8rem;
-    height: 12rem;
-    width: 12rem;
-    margin: 1rem auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #000;
+  border: 3px solid white;
+  border-radius: 0.8rem;
+  height: 12rem;
+  width: 12rem;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .currentCard {
-    border: 3px solid white;
-    width: min-content;
-    height: min-content;
-    font-size: 4rem; 
+  border: 3px solid white;
+  width: min-content;
+  height: min-content;
+  font-size: 4rem;
 }
 
 .buttonsContainer {
-    /* border: 3px solid white; */
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+  /* border: 3px solid white; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .btn {
-    height: 2rem;
-    width: 5rem;
-    border: 3px solid black;
-    border-radius: 1rem;
-    margin-inline: auto;
+  height: 2rem;
+  width: 5rem;
+  border: 3px solid black;
+  border-radius: 1rem;
+  margin-inline: auto;
 }
-
