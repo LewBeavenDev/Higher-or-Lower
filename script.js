@@ -30,7 +30,6 @@ function createDeck() {
 
 // Shuffle function
 // For every card in the deck, selects a random card, and replaces that with the new card. Resulting in a truly shuffled deck of cards.
-
 function shuffleDeck() {
   for (let card in deck) {
     let tempCard = deck[card];
@@ -41,7 +40,6 @@ function shuffleDeck() {
 }
 
 // Initialise Game
-
 function initGame() {
   deck = [];
   discardedCards = [];
@@ -104,31 +102,32 @@ let bet = 10;
 // appends the HTML with the current bet sizing
 betAmount.innerHTML = bet;
 
+// total score selector
+let totalScore = document.getElementById("totalScoreNumber");
+// initialises starting score to 100;
+let currentScore = 100;
+// appends the HTML with the current score
+totalScore.innerHTML = currentScore;
+
 // increment bet sizing, maximum bet size is 100
 function raiseBet() {
-  if (bet < 100) {
+  if (bet < 100 && currentScore > 0) {
     bet += 10;
     betAmount.innerHTML = bet;
+    currentScore -= 10;
+    totalScore.innerHTML = currentScore;
   } else {
     console.log("maximum bet size is 100");
   }
 }
-
 // decrement bet sizing, minimum bet size is 10
 function lowerBet() {
   if (bet >= 20) {
     bet -= 10;
     betAmount.innerHTML = bet;
+    currentScore += 10;
+    totalScore.innerHTML = currentScore;
   } else {
     console.log("minimum bet is 10");
   }
 }
-
-// defines what happens when you win.
-// winning = bet amount + (bet amount * 1.5)
-// function winning() {
-//   number += 1.5;
-//   console.log(number);
-// }
-// winning()
-// betAmount.innerHTML = number;
