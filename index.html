@@ -23,8 +23,10 @@
             <img class="currentCard" src="" alt="" style="width: 100px" />
           </div>
           <div class="buttonsContainer">
-            <span class="betAmountNumber">10</span>
-            <button class="raiseBetBtn btn">Raise Bet</button>
+            <p id="betAmountNumber" class="betAmountNumber"></p>
+            <button class="raiseBetBtn btn" onclick="raiseBet()">
+              Raise Bet
+            </button>
             <p class="totalScoreNumber">#</p>
             <p class="betAmount">Bet Amount</p>
             <p></p>
@@ -32,7 +34,9 @@
             <button class="higherBtn btn" onclick="dealNewCard()">
               Higher
             </button>
-            <button class="lowerBetBtn btn">Lower Bet</button>
+            <button class="lowerBetBtn btn" onclick="lowerBet()">
+              Lower Bet
+            </button>
             <button class="lowerBtn btn" onclick="dealNewCard()">Lower</button>
           </div>
         </div>

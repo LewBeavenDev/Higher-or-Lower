@@ -91,8 +91,44 @@ function checkHigherResult() {
 // upon lower button press, check if card was lower than the last, if so add bet amount * 2 to total score
 function checkLowerResult() {
   if (card < discardedCards.length(-1)) {
-    totalScore += betAmount * 2;
+    totalScore += betAmount.innerHTML * 2;
   } else {
-    totalScore -= betAmount;
+    totalScore -= betAmount.innerHTML;
   }
 }
+
+// bet amount selector
+let betAmount = document.getElementById("betAmountNumber");
+// initialises starting bet to 10
+let bet = 10;
+// appends the HTML with the current bet sizing
+betAmount.innerHTML = bet;
+
+// increment bet sizing, maximum bet size is 100
+function raiseBet() {
+  if (bet < 100) {
+    bet += 10;
+    betAmount.innerHTML = bet;
+  } else {
+    console.log("maximum bet size is 100");
+  }
+}
+
+// decrement bet sizing, minimum bet size is 10
+function lowerBet() {
+  if (bet >= 20) {
+    bet -= 10;
+    betAmount.innerHTML = bet;
+  } else {
+    console.log("minimum bet is 10");
+  }
+}
+
+// defines what happens when you win.
+// winning = bet amount + (bet amount * 1.5)
+// function winning() {
+//   number += 1.5;
+//   console.log(number);
+// }
+// winning()
+// betAmount.innerHTML = number;
