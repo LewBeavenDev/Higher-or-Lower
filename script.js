@@ -1,28 +1,28 @@
 // Creating Deck of Cards
 let deck = [];
 let ranks = [
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "10",
-  "jack",
-  "queen",
-  "king",
-  "ace",
+  { label: "2", value: 2 },
+  { label: "3", value: 3 },
+  { label: "4", value: 4 },
+  { label: "5", value: 5 },
+  { label: "6", value: 6 },
+  { label: "7", value: 7 },
+  { label: "8", value: 8 },
+  { label: "9", value: 9 },
+  { label: "10", value: 10 },
+  { label: "jack", value: 11 },
+  { label: "queen", value: 12 },
+  { label: "king", value: 13 },
+  { label: "ace", value: 14 },
 ];
 let suits = ["spades", "clubs", "hearts", "diamonds"];
 let discardedCards = [];
-
+let totalScore = 100;
 // Function loops through 'ranks' and 'suits' array and populates a new array (deck).
 function createDeck() {
   for (let suit in suits) {
     for (let rank in ranks) {
-      deck.push(`${ranks[rank]}_of_${suits[suit]}`);
+      deck.push(`${ranks[rank]["label"]}_of_${suits[suit]}`);
     }
   }
   return deck;
@@ -46,6 +46,8 @@ function initGame() {
   createDeck();
   shuffleDeck();
   dealNewCard();
+  totalScore = 100;
+  document.getElementById("totalScoreNumber").innerHTML = totalScore;
 }
 
 initGame();
@@ -77,22 +79,50 @@ function dealNewCard() {
   }
 }
 
-// upon higher button press, check if card was higher than the last, if so add bet amount * 2 to total score
-function checkHigherResult() {
-  if (card > discardedCards.length(-1)) {
-    totalScore += betAmount * 2;
-  } else {
-    totalScore -= betAmount;
+// Grabs the value from the card objects and splits the number from the front.
+function getCardValue(card) {
+  const label = card.split("_")[0];
+  let cardValue = 0;
+  for (let rank in ranks) {
+    const currentRank = ranks[rank];
+    if (currentRank["label"] === label) {
+      cardValue = currentRank["value"];
+      break;
+    }
   }
+  return cardValue;
+}
+
+// upon higher button press, check if card was higher than the last, if so add bet amount * 2 to total score
+document
+  .getElementById("higherBtn")
+  .addEventListener("click", checkHigherResult);
+function checkHigherResult() {
+  const currentCard = card;
+  dealNewCard();
+  const newCard = card;
+  if (getCardValue(currentCard) < getCardValue(newCard)) {
+    totalScore += parseInt(betAmount.innerHTML) * 2;
+  } else {
+    totalScore -= parseInt(betAmount.innerHTML);
+  }
+  document.getElementById("totalScoreNumber").innerHTML = totalScore;
 }
 
 // upon lower button press, check if card was lower than the last, if so add bet amount * 2 to total score
+document
+  .getElementById("lowerBtn")
+  .addEventListener("click", checkLowerResult);
 function checkLowerResult() {
-  if (card < discardedCards.length(-1)) {
-    totalScore += betAmount.innerHTML * 2;
+  const currentCard = card;
+  dealNewCard();
+  const newCard = card;
+  if (getCardValue(currentCard) > getCardValue(newCard)) {
+    totalScore += parseInt(betAmount.innerHTML) * 2;
   } else {
-    totalScore -= betAmount.innerHTML;
+    totalScore -= parseInt(betAmount.innerHTML);
   }
+  document.getElementById("totalScoreNumber").innerHTML = totalScore;
 }
 
 // bet amount selector
@@ -102,31 +132,29 @@ let bet = 10;
 // appends the HTML with the current bet sizing
 betAmount.innerHTML = bet;
 
-// total score selector
-let totalScore = document.getElementById("totalScoreNumber");
-// initialises starting score to 100;
-let currentScore = 100;
-// appends the HTML with the current score
-totalScore.innerHTML = currentScore;
-
 // increment bet sizing, maximum bet size is 100
+document.getElementById('raiseBetBtn').addEventListener("click", raiseBet);
 function raiseBet() {
-  if (bet < 100 && currentScore > 0) {
+  if (bet < 100) {
     bet += 10;
+    totalScore -= 10;
+    totalScoreNumber.innerHTML = totalScore;
     betAmount.innerHTML = bet;
-    currentScore -= 10;
-    totalScore.innerHTML = currentScore;
+
   } else {
     console.log("maximum bet size is 100");
   }
 }
+
 // decrement bet sizing, minimum bet size is 10
+document.getElementById('lowerBetBtn').addEventListener("click", lowerBet);
 function lowerBet() {
   if (bet >= 20) {
     bet -= 10;
+    totalScore += 10;
+    totalScoreNumber.innerHTML = totalScore;
     betAmount.innerHTML = bet;
-    currentScore += 10;
-    totalScore.innerHTML = currentScore;
+    
   } else {
     console.log("minimum bet is 10");
   }

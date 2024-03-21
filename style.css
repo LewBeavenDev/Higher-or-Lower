@@ -71,3 +71,7 @@ body {
   border-radius: 1rem;
   margin-inline: auto;
 }
+
+.currentCard {
+  width: 100px;
+}

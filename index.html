@@ -20,24 +20,24 @@
         </div>
         <div class="felt">
           <div class="cardContainer">
-            <img class="currentCard" src="" alt="" style="width: 100px" />
+            <img class="currentCard" src="" alt="" />
           </div>
           <div class="buttonsContainer">
             <p id="betAmountNumber" class="betAmountNumber"></p>
-            <button class="raiseBetBtn btn" onclick="raiseBet()">
+            <button class="raiseBetBtn btn" id = "raiseBetBtn">
               Raise Bet
             </button>
             <p class="totalScoreNumber" id="totalScoreNumber"></p>
             <p class="betAmount">Bet Amount</p>
             <p></p>
             <p class="totalScore">Total Score</p>
-            <button class="higherBtn btn" onclick="dealNewCard()">
+            <button class="higherBtn btn" id="higherBtn">
               Higher
             </button>
-            <button class="lowerBetBtn btn" onclick="lowerBet()">
+            <button class="lowerBetBtn btn" id = "lowerBetBtn">
               Lower Bet
             </button>
-            <button class="lowerBtn btn" onclick="dealNewCard()">Lower</button>
+            <button class="lowerBtn btn" id="lowerBtn">Lower</button>
           </div>
         </div>
       </div>
