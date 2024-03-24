@@ -159,5 +159,21 @@ function lowerBet() {
     console.log("minimum bet is 10");
   }
 }
+// Selecting lose screen pop up
+let loseScreen = document.getElementById('loseScreen');
+// Default lose screen to being invisible
+loseScreen.style.visibility = 'hidden';
+winScreen.style.visibility = 'hidden';
+
+// Game Loop 
+
+// const gameOver() {
+//   if (totalScore <= 0) {
+//     loseScreen.style.visibility = 'visible'
+//   } else {
+//     winScreen.style.visibility = 'visible'
+//   }
+// }
+
 
 

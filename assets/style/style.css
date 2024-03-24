@@ -76,3 +76,29 @@ body {
 .currentCard {
   width: 100px;
 }
+
+.loseScreen {
+  position: absolute;
+  z-index: 1000;
+  border: 3px solid white;
+  width: 30rem;
+  border-radius: 1rem;
+  background-color: #831f1d;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  transform: translateX(50%) translateY(-200%);
+}
+
+.winScreen {
+  position: absolute;
+  z-index: 1000;
+  border: 3px solid white;
+  width: 30rem;
+  border-radius: 1rem;
+  background-color: #152884;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  transform: translateX(50%) translateY(-200%);
+}
