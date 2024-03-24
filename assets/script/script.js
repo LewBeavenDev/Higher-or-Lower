@@ -159,3 +159,5 @@ function lowerBet() {
     console.log("minimum bet is 10");
   }
 }
+
+
