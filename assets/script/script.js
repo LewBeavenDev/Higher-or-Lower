@@ -7,6 +7,12 @@ let winScreen = document.getElementById('winScreen');
 loseScreen.style.visibility = 'hidden';
 winScreen.style.visibility = 'hidden';
 
+// bet amount selector
+let betAmount = document.getElementById("betAmountNumber");
+// initialises starting bet to 10
+let bet = 10;
+// appends the HTML with the current bet sizing
+betAmount.innerHTML = bet;
 
 
 // Creating Deck of Cards
@@ -30,11 +36,23 @@ let suits = ["spades", "clubs", "hearts", "diamonds"];
 let discardedCards = [];
 let totalScore = 100;
 
+
 // Game Loop 
 
 function gameLoss () {
   loseScreen.style.visibility = 'visible';
 }
+
+function gameWin () {
+  winScreen.style.visibility = 'visible';
+}
+
+// play again win/lose button selector
+let playAgainBtnLose = document.getElementById('playAgainBtnLose');
+let playAgainBtnWin = document.getElementById('playAgainBtnWin');
+// play again win/lose button reinitialise game
+playAgainBtnLose.addEventListener('click', initGame);
+playAgainBtnWin.addEventListener('click', initGame);
 
 // Function loops through 'ranks' and 'suits' array and populates a new array (deck).
 function createDeck() {
@@ -66,6 +84,11 @@ function initGame() {
   dealNewCard();
   totalScore = 100;
   document.getElementById("totalScoreNumber").innerHTML = totalScore;
+  bet = 10;
+  betAmount.innerHTML = bet; 
+  loseScreen.style.visibility = 'hidden';
+  winScreen.style.visibility = 'hidden';  
+  
 }
 
 initGame();
@@ -93,7 +116,6 @@ function dealNewCard() {
   } // if there are no more cards to be dealt, game ends and game re initialises
   else {
     gameWin();
-    initGame();
   }
 }
 
@@ -149,12 +171,7 @@ function checkLowerResult() {
   }
 }
 
-// bet amount selector
-let betAmount = document.getElementById("betAmountNumber");
-// initialises starting bet to 10
-let bet = 10;
-// appends the HTML with the current bet sizing
-betAmount.innerHTML = bet;
+
 
 // increment bet sizing, maximum bet size is 100
 document.getElementById('raiseBetBtn').addEventListener("click", raiseBet);
