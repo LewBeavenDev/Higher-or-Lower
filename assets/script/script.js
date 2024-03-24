@@ -1,3 +1,14 @@
+
+
+// Selecting lose/win screen pop up
+let loseScreen = document.getElementById('loseScreen');
+let winScreen = document.getElementById('winScreen');
+// Default lose/win screen to being invisible
+loseScreen.style.visibility = 'hidden';
+winScreen.style.visibility = 'hidden';
+
+
+
 // Creating Deck of Cards
 let deck = [];
 let ranks = [
@@ -18,6 +29,13 @@ let ranks = [
 let suits = ["spades", "clubs", "hearts", "diamonds"];
 let discardedCards = [];
 let totalScore = 100;
+
+// Game Loop 
+
+function gameLoss () {
+  loseScreen.style.visibility = 'visible';
+}
+
 // Function loops through 'ranks' and 'suits' array and populates a new array (deck).
 function createDeck() {
   for (let suit in suits) {
@@ -74,7 +92,7 @@ function dealNewCard() {
     document.querySelector(".currentCard").alt = `${card}`;
   } // if there are no more cards to be dealt, game ends and game re initialises
   else {
-    console.log("Game Over");
+    gameWin();
     initGame();
   }
 }
@@ -107,6 +125,9 @@ function checkHigherResult() {
     totalScore -= parseInt(betAmount.innerHTML);
   }
   document.getElementById("totalScoreNumber").innerHTML = totalScore;
+  if (totalScore <= 0) {
+    gameLoss();
+  }
 }
 
 // upon lower button press, check if card was lower than the last, if so add bet amount * 2 to total score
@@ -123,6 +144,9 @@ function checkLowerResult() {
     totalScore -= parseInt(betAmount.innerHTML);
   }
   document.getElementById("totalScoreNumber").innerHTML = totalScore;
+  if (totalScore <= 0) {
+    gameLoss();
+  }
 }
 
 // bet amount selector
@@ -159,21 +183,10 @@ function lowerBet() {
     console.log("minimum bet is 10");
   }
 }
-// Selecting lose screen pop up
-let loseScreen = document.getElementById('loseScreen');
-// Default lose screen to being invisible
-loseScreen.style.visibility = 'hidden';
-winScreen.style.visibility = 'hidden';
 
-// Game Loop 
 
-// const gameOver() {
-//   if (totalScore <= 0) {
-//     loseScreen.style.visibility = 'visible'
-//   } else {
-//     winScreen.style.visibility = 'visible'
-//   }
-// }
+
+
 
 
 
