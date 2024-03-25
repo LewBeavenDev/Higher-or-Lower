@@ -63,6 +63,7 @@ function gameWin () {
 // play again win/lose button selector
 let playAgainBtnLose = document.getElementById('playAgainBtnLose');
 let playAgainBtnWin = document.getElementById('playAgainBtnWin');
+
 // play again win/lose button reinitialise game
 playAgainBtnLose.addEventListener('click', initGame);
 playAgainBtnWin.addEventListener('click', initGame);

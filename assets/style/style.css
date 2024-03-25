@@ -20,7 +20,13 @@ button {
 body {
   font-family: "Open Sans", sans-serif;
   color: white;
-  background-color: #000;
+  background: radial-gradient(#000000 25%, #252525);
+  background-size: cover;
+  background-repeat: none;
+  height: 100vh;
+}
+main {
+  margin: 0;
 }
 
 .title {
@@ -40,11 +46,11 @@ body {
 
 
 .cardContainer {
-  background-color: #000000;
+  background: radial-gradient(black 40%, grey);
   border: 3px solid white;
   border-radius: 0.8rem;
   height: 12rem;
-  width: 12rem;
+  width: 10rem;
   margin: 1rem auto;
   display: flex;
   justify-content: center;
@@ -63,14 +69,47 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   align-items: center;
+  margin-bottom: 20px;
+}
+
+button {
+  cursor: pointer;
 }
 
 .btn {
   height: 2rem;
   width: 6rem;
+  color: #000;
   border: 3px solid black;
   border-radius: 1rem;
   margin-inline: auto;
+  box-shadow: 0px 4px 5px black;
+  /* transition-property: transform;
+  transition-duration: .3s;
+  transition-timing-function: ease-in; */
+  transition: all .1s ease-in;
+}
+
+.btn:hover {
+  transform: scale(105%);
+  box-shadow: 1px 10px 5px;
+}
+
+.btn:active {
+  transform: scale(100%);
+  box-shadow: 0px 4px 5px black;
+}
+
+.raiseBetBtn, .lowerBetBtn{
+  background-color: rgb(152, 45, 45);
+}
+
+.higherBtn, .lowerBtn {
+  background-color: rgb(31, 31, 187);
+}
+
+.firstPlayBtn {
+  animation-name: buttonPop;
 }
 
 .currentCard {
@@ -78,7 +117,6 @@ body {
 }
 
 .loseScreen {
-
   z-index: 1000;
   border: 3px solid white;
   width: 30rem;
@@ -120,13 +158,18 @@ body {
 }
 
 @keyframes welcomePop {
-  0% {height: 0px; width: 0px; color: #ffffff00;}  
-  80% {color: #ffffff00;}
+  0% {
+    height: 0px; 
+    width: 0px; 
+    color: #ffffff00; 
+    border: #ffffff00;
+    background-color: #ffffff00;
+  }  
+  80% {
+    color: #ffffff00; 
+    border: #ffffff00;
+  }
 }
 
-@keyframes losePop {
-  0% {height: 0px; width: 0px; color: #ffffff00;}  
-  80% {color: #ffffff00;}
-}
 
-  
+
