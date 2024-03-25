@@ -7,6 +7,11 @@ let winScreen = document.getElementById('winScreen');
 loseScreen.style.visibility = 'hidden';
 winScreen.style.visibility = 'hidden';
 
+// welcome screen selector
+let welcomeScreen = document.getElementById('welcomeScreen');
+// Default welcome screen to be hidden by default
+welcomeScreen.style.visibility = 'visible';
+
 // bet amount selector
 let betAmount = document.getElementById("betAmountNumber");
 // initialises starting bet to 10
@@ -36,11 +41,19 @@ let suits = ["spades", "clubs", "hearts", "diamonds"];
 let discardedCards = [];
 let totalScore = 100;
 
+function hideWelcome() {
+  document.getElementById('welcomeScreen').style.visibility = "hidden";
+}
 
 // Game Loop 
 
+// play game button selector
+let firstPlayBtn = document.getElementById('firstPlayBtn');
+firstPlayBtn.addEventListener('click', hideWelcome);
+
 function gameLoss () {
   loseScreen.style.visibility = 'visible';
+  loseScreen.style.animation = 'losePop 1s';
 }
 
 function gameWin () {
@@ -53,6 +66,8 @@ let playAgainBtnWin = document.getElementById('playAgainBtnWin');
 // play again win/lose button reinitialise game
 playAgainBtnLose.addEventListener('click', initGame);
 playAgainBtnWin.addEventListener('click', initGame);
+
+
 
 // Function loops through 'ranks' and 'suits' array and populates a new array (deck).
 function createDeck() {
@@ -87,8 +102,7 @@ function initGame() {
   bet = 10;
   betAmount.innerHTML = bet; 
   loseScreen.style.visibility = 'hidden';
-  winScreen.style.visibility = 'hidden';  
-  
+  winScreen.style.visibility = 'hidden';    
 }
 
 initGame();
@@ -176,14 +190,14 @@ function checkLowerResult() {
 // increment bet sizing, maximum bet size is 100
 document.getElementById('raiseBetBtn').addEventListener("click", raiseBet);
 function raiseBet() {
-  if (bet < 100) {
+  if (bet < (totalScore + bet)) {
     bet += 10;
     totalScore -= 10;
     totalScoreNumber.innerHTML = totalScore;
     betAmount.innerHTML = bet;
 
   } else {
-    console.log("maximum bet size is 100");
+    console.log("maximum bet reached");
   }
 }
 

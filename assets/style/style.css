@@ -38,8 +38,9 @@ body {
   text-align: center;
 }
 
+
 .cardContainer {
-  background-color: #000;
+  background-color: #000000;
   border: 3px solid white;
   border-radius: 0.8rem;
   height: 12rem;
@@ -51,7 +52,6 @@ body {
 }
 
 .currentCard {
-  border: 3px solid white;
   width: min-content;
   height: min-content;
   font-size: 4rem;
@@ -78,7 +78,7 @@ body {
 }
 
 .loseScreen {
-  position: absolute;
+
   z-index: 1000;
   border: 3px solid white;
   width: 30rem;
@@ -87,12 +87,13 @@ body {
   margin: 0 auto;
   padding: 0.5rem 2rem;
   text-align: center;
-  transform: translateX(50%) translateY(-200%);
+  transform: translateY(-200%);
+  animation-name: losePop;
+  animation-duration: .5s;
 }
 
 .winScreen {
-  position: absolute;
-  z-index: 1000;
+  z-index: 100;
   border: 3px solid white;
   width: 30rem;
   border-radius: 1rem;
@@ -100,5 +101,32 @@ body {
   margin: 0 auto;
   padding: 0.5rem 2rem;
   text-align: center;
-  transform: translateX(50%) translateY(-200%);
+  transform: translateY(-300%);
 }
+
+.welcomeScreen {
+  z-index: 1000;
+  border: 3px solid white;
+  width: 30rem;
+  height: 35rem;
+  border-radius: 1rem;
+  background-color: rgba(29, 131, 29, 0.8);
+  margin: 0 auto;
+  padding: 2rem 4rem;
+  text-align: center;
+  transform: translateY(-120%);
+  animation-name: welcomePop;
+  animation-duration: .5s;
+}
+
+@keyframes welcomePop {
+  0% {height: 0px; width: 0px; color: #ffffff00;}  
+  80% {color: #ffffff00;}
+}
+
+@keyframes losePop {
+  0% {height: 0px; width: 0px; color: #ffffff00;}  
+  80% {color: #ffffff00;}
+}
+
+  
