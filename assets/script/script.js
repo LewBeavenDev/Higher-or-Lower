@@ -57,8 +57,8 @@ function gameLoss () {
 }
 
 function gameWin () {
-  let finalScore = document.getElementById('finalScore').innerHTML;
   finalScore += totalScore;
+  document.getElementById('finalScore').innerHTML = totalScore + bet;
   console.log(finalScore);
   winScreen.style.visibility = 'visible';
   winScreen.style.animation = 'pop 0.2s ease'
