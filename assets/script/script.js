@@ -41,23 +41,27 @@ let suits = ["spades", "clubs", "hearts", "diamonds"];
 let discardedCards = [];
 let totalScore = 100;
 
+// hides welcome screen
 function hideWelcome() {
-  document.getElementById('welcomeScreen').style.visibility = "hidden";
+  document.getElementById('welcomeScreen').style.animation = "slideUp 1s ease-in forwards";
 }
-
-// Game Loop 
 
 // play game button selector
 let firstPlayBtn = document.getElementById('firstPlayBtn');
 firstPlayBtn.addEventListener('click', hideWelcome);
 
+// 
 function gameLoss () {
   loseScreen.style.visibility = 'visible';
-  loseScreen.style.animation = 'losePop 1s';
+  loseScreen.style.animation = 'pop 0.2s ease';
 }
 
 function gameWin () {
+  let finalScore = document.getElementById('finalScore').innerHTML;
+  finalScore += totalScore;
+  console.log(finalScore);
   winScreen.style.visibility = 'visible';
+  winScreen.style.animation = 'pop 0.2s ease'
 }
 
 // play again win/lose button selector

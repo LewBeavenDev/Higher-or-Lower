@@ -38,7 +38,7 @@ main {
   border: 3px solid white;
   width: 30rem;
   border-radius: 1rem;
-  background-color: #1d831d;
+  background: linear-gradient(#1d831d, #082a08);
   margin: 0 auto;
   padding: 0.5rem 2rem;
   text-align: center;
@@ -101,16 +101,22 @@ button {
 }
 
 .raiseBetBtn, .lowerBetBtn{
-  background-color: rgb(152, 45, 45);
+  background: linear-gradient(rgb(152, 87, 87), rgb(152, 45, 45)); 
 }
 
 .higherBtn, .lowerBtn {
-  background-color: rgb(31, 31, 187);
+  background: linear-gradient(rgb(73, 73, 185), rgb(31, 31, 187));
 }
-
 .firstPlayBtn {
+  background: linear-gradient(rgb(152, 87, 152), rgb(149, 46, 149));
   animation-name: buttonPop;
 }
+
+.playAgainButton {
+  background: linear-gradient(rgb(152, 87, 152), rgb(149, 46, 149));
+}
+
+
 
 .currentCard {
   width: 100px;
@@ -153,23 +159,30 @@ button {
   padding: 2rem 4rem;
   text-align: center;
   transform: translateY(-120%);
-  animation-name: welcomePop;
+  animation-name: pop;
   animation-duration: .5s;
 }
 
-@keyframes welcomePop {
-  0% {
-    height: 0px; 
-    width: 0px; 
+/* keyframes */
+
+@keyframes pop {
+  from { 
     color: #ffffff00; 
     border: #ffffff00;
     background-color: #ffffff00;
   }  
-  80% {
-    color: #ffffff00; 
-    border: #ffffff00;
+  to {
+    
   }
 }
 
+@keyframes slideUp {
+  from {
+    transform: translateY(-120%);
+  }
+  to {
+    transform: translateY(-10000px);
+  }
+}
 
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/style/style.css" />
+    <link rel="stylesheet" href="../assets/style/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -44,12 +44,15 @@
       <div class="loseScreen container" id="loseScreen">
         <h1>You Lose! :( </h1>
         <p>You ran out of money!</p>
-        <button class="btn" id="playAgainBtnWin">Play Again</button>
+        <br>
+        <button class="btn playAgainButton" id="playAgainBtnWin">Play Again</button>
       </div>
       <div class="winScreen container" id="winScreen">
         <h1>Game Over! :) </h1>
-        <p>Your score is <span></span></p>
-        <button class="btn" id="playAgainBtnLose">Play Again</button>
+        <p>Your score is</p>
+        <br>
+        <p id="finalScore"></p>
+        <button class="btn playAgainButton" id="playAgainBtnLose">Play Again</button>
       </div>
       <div class="welcomeScreen container" id="welcomeScreen">
         <h1>Welcome to Higher or Lower</h1>
@@ -68,11 +71,11 @@
         <br>
         <br>
         <audio src="assets/sounds/uiClick.mp3" id="buttonSound"></audio>
-        <button class="btn" id="firstPlayBtn" >Play</button>          
+        <button class="btn firstPlayBtn" id="firstPlayBtn" >Play</button>          
       </div>
       
     </main>
 
-    <script src="/assets/script/script.js"></script>
+    <script src="../assets/script/script.js"></script>
   </body>
 </html>
