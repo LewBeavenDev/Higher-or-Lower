@@ -21,3 +21,13 @@ Higher or Lower is a card game where you guess whether the next card is higher o
   - Empty
 
 ## Design
+
+
+
+
+### Samples
+- Poker chip sound (https://pixabay.com/sound-effects/poker-chips1-87592/)
+
+- Game over sound (https://pixabay.com/sound-effects/game-over-arcade-6435/)
+
+- Button click sound (https://pixabay.com/sound-effects/ui-click-43196/)

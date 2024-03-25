@@ -217,6 +217,25 @@ function lowerBet() {
 }
 
 
+// sounds 
+
+// button click sound selector 
+const buttonSound = document.getElementById('buttonSound');
+
+let buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => {
+  button.addEventListener("click", playButtonSound)
+})
+
+function playButtonSound() {
+  buttonSound.currentTime = 0;
+  buttonSound.play();
+}
+
+
+
+
 
 
 
