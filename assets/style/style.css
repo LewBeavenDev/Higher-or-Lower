@@ -41,6 +41,7 @@ main {
   border-radius: 1rem;
   background: linear-gradient(#1d831d, #082a08);
   margin: 0 auto;
+  margin-top: 100px;
   padding: 0.5rem 2rem;
   text-align: center;
 }
@@ -159,7 +160,7 @@ button {
   margin: 0 auto;
   padding: 2rem 4rem;
   text-align: center;
-  transform: translateY(-120%);
+  transform: translateY(-130%);
   animation-name: pop;
   animation-duration: .5s;
 }
@@ -184,11 +185,42 @@ button {
 
 @keyframes slideUp {
   from {
-    transform: translateY(-120%);
+    transform: translateY(-130%);
   }
   to {
     transform: translateY(-10000px);
   }
 }
 
+@media (max-width: 480px) {
+  .body {
+    overflow: visible;
+  }
 
+  .felt {
+    transform: scale(75%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 450px;
+    width: 320px;
+    padding: 10px;
+  }
+
+  .welcomeScreen {
+    transform: translateY(-800px);
+    width: 300px;
+    height: min-content;
+    padding: 20px;    
+  }
+
+  .winScreen {
+    width: 300px;
+  }
+
+  .loseScreen {
+    width: 300px;
+  }
+}
