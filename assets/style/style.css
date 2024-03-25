@@ -205,7 +205,7 @@ button {
     flex-wrap: wrap;
     flex-direction: column;
     height: 450px;
-    width: 320px;
+    width: 90%;
     padding: 10px;
   }
 
@@ -213,7 +213,8 @@ button {
     transform: translateY(-800px);
     width: 300px;
     height: min-content;
-    padding: 20px;    
+    padding: 20px; 
+    overflow: visible;   
   }
 
   .winScreen {
