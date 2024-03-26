@@ -235,10 +235,10 @@ In the final stages of development I got several family members and friends to t
 
 - Button sounds not playing
 
- - After I first set up the button sounds, if the buttons were pressed multiple times in quick succession then the sound wouldn't play for each press. 
- - I figured it was the audio clip length so went in and trimmed the sound either side of the click sound. But this didn't fix the issue. 
- - I then worked out after pressing a button really fast and paying attention to when the sound would play again I realised that the sound couldn't play until the sound currently playing had finished. I needed a way to reset the sound to the start on every button press. So I went to Google. 
- - I found that by simply implementing 'sound.currentTime=0' you could do exaclty what was needed. So I implemented this and resolved the bug. 
+  - After I first set up the button sounds, if the buttons were pressed multiple times in quick succession then the sound wouldn't play for each press. 
+  - I figured it was the audio clip length so went in and trimmed the sound either side of the click sound. But this didn't fix the issue. 
+  - I then worked out after pressing a button really fast and paying attention to when the sound would play again I realised that the sound couldn't play until the sound currently playing had finished. I needed a way to reset the sound to the start on every button press. So I went to Google. 
+  - I found that by simply implementing 'sound.currentTime=0' you could do exaclty what was needed. So I implemented this and resolved the bug. 
 
 ## Unresolved 
 
