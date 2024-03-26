@@ -2,7 +2,7 @@
 
 ## Milestone Project 2 - Interactive Front-End Site
 
-![Mockup Image](assets\images\mockup.png)
+![Mockup Image](F:\LewBeavenDev\HigherOrLower\Higher-or-Lower\assets\images\mockup.png)
 
 Higher or Lower is a card game where you guess whether the next card is higher or loer than the one you are shown. The player can bet points to try and get the highest score possible.
 
@@ -54,7 +54,7 @@ Higher or Lower is a card game where you guess whether the next card is higher o
 
 ## Features
 
-### Landing/Welcome Page
+## Landing/Welcome Page
 
 ![](assets\images\landingPage.png)
 
@@ -63,7 +63,7 @@ Higher or Lower is a card game where you guess whether the next card is higher o
 - The Play button has a tactile hover and active effect alongside a birght but soft color to clearly navigate the user to the game. 
 - The button has a tactile click sound upon press to give a pleasing sensory feel to it. 
 
-### Game Page Features
+## Game Page Features
 
 ![](assets\images\gamePage.png)
 
@@ -73,7 +73,7 @@ Higher or Lower is a card game where you guess whether the next card is higher o
 - The users total score is placed in the middle as that is the key score the user wants to keep track of. 
 - The higher/lower and increase/decrease buttons are placed with the higher on top and lower below to further make the interface feel intuitive. 
 
-### Lose Screen Features
+## Lose Screen Features
 
 ![](assets\images\lossScreen.png)
 
@@ -81,7 +81,7 @@ Higher or Lower is a card game where you guess whether the next card is higher o
 - Underneath the title it explains why the user lost in case they didnt understand.
 - At the bottom is a play game button which redirects the user to play again.
 
-### Win Screen Features
+## Win Screen Features
 
 ![](assets\images\winScreen.png)
 
@@ -90,9 +90,9 @@ Higher or Lower is a card game where you guess whether the next card is higher o
 - At the bottom is a play game button which redirects the user to play again.
 
 
-### Future Features 
+## Future Features 
 
-#### Gameplay 
+## Gameplay 
 
 - The first thing I would implement is a card counter to tell the user how many cards are left 
 - I would implement an openable discard pile which gives the user the ability to physically see all the discarded cards to inform themselves on the likelihood of the next card being higher or lower. 
@@ -101,11 +101,7 @@ Higher or Lower is a card game where you guess whether the next card is higher o
 - I would also like to implement a leaderboard or the ability for the user to log in and compete against other players. 
 
 
-### Samples
-
-- [Poker chip sound](https://pixabay.com/sound-effects/poker-chips1-87592/)
-
-- [Game over sound](https://pixabay.com/sound-effects/game-over-arcade-6435/)
+## Samples
 
 - [Button click sound](https://pixabay.com/sound-effects/ui-click-43196/)
 
