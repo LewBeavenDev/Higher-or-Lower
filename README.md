@@ -132,3 +132,9 @@ Higher or Lower is a card game where you guess whether the next card is higher o
   - Figma was used for the wireframes. 
 - [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/)
   - Firefox developer tools was used to debug and test responsiveness through development. The console was also used to debug the JavaScript through development. 
+
+
+# Testing
+
+## W3C HTML Validator
+
