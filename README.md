@@ -22,14 +22,9 @@ Higher or Lower is a card game where you guess whether the next card is higher o
 - To package the game within an aesthetically pleasing, modern looking page that is easy to use and fun to play.
 - To make the game fully in vanilla JavaScript to grow my foundation of knowledge. 
 
-## User goals
+# Design Choices
 
-- An easily useable UI with intuitive design
-- All rules of game are clearly explained
-
-## Design Choices
-
-### Color Scheme
+## Color Scheme
 
 
 <img src="assets\images\higher_or_lower_palette.png">
@@ -38,22 +33,22 @@ Higher or Lower is a card game where you guess whether the next card is higher o
 
 - overall the color scheme is simple but pops and draws the users eyes to what is important. 
 
-### Typography
+## Typography
 
 - I have used the Open Sans font for the whole page as it is easily readable and keeps the pages looking clean and simple. 
 
-### Aesthetics 
+## Aesthetics 
 
 - The overall aesthetics reflect the table of a card game. The smooth edges and pastel buttons are easy on the eyes and clearly redable. 
 - The eyes naturally focus on the card in the center as it sits in its own seperate compartment. 
 
-## Wireframes 
+# Wireframes 
 
 <img src="assets\images\higherOrLowerWireFrame.png">
 
 - My wireframe was made in Figma
 
-## Features
+# Features
 
 ## Landing/Welcome Page
 
@@ -153,6 +148,12 @@ Higher or Lower is a card game where you guess whether the next card is higher o
 <img src="assets/images/jshintReport.png">
 
 - JShint report returns 4 warnings, all the same. I tried to go in and fix them but I struggled to get the output of the deck generator to fit the way I need the output to be, to pull the correct card image from the folder. I intend to fix this in the future. 
+
+## Lighthouse Report
+
+<img src="assets\images\lighthouseReport.png">
+
+- Scores well across Lighthouse testing
 
 ## Browser Compatability
 
