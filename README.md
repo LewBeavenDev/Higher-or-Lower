@@ -39,3 +39,7 @@ Higher or Lower is a card game where you guess whether the next card is higher o
 - Game over sound (https://pixabay.com/sound-effects/game-over-arcade-6435/)
 
 - Button click sound (https://pixabay.com/sound-effects/ui-click-43196/)
+
+## Resources 
+- [Mockup images](https://techsini.com/multi-mockup/index.php)
+- [Color palette](https://coolors.co/)
