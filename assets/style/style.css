@@ -10,6 +10,24 @@
   line-height: 1.5;
 }
 
+header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background: linear-gradient(#1d831d, #082a08);
+  border-bottom: 3px solid white;
+}
+
+header h1 {
+  transform: translateX(30px);
+  font-weight: 600;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
 button {
   background-image: none;
   border: none;
@@ -103,19 +121,19 @@ button {
 }
 
 .raiseBetBtn, .lowerBetBtn{
-  background: linear-gradient(rgb(152, 87, 87), rgb(152, 45, 45)); 
+  background: linear-gradient(#985757, #982d2d); 
 }
 
 .higherBtn, .lowerBtn {
-  background: linear-gradient(rgb(73, 73, 185), rgb(31, 31, 187));
+  background: linear-gradient(#4949b9, #1f1fbb);
 }
 .firstPlayBtn {
-  background: linear-gradient(rgb(152, 87, 152), rgb(149, 46, 149));
+  background: linear-gradient(#985798, #952e95);
   animation-name: buttonPop;
 }
 
 .playAgainButton {
-  background: linear-gradient(rgb(152, 87, 152), rgb(149, 46, 149));
+  background: linear-gradient(#985798, #952e95);
 }
 
 
@@ -170,6 +188,7 @@ button {
 }
 
 
+
 /* keyframes */
 
 @keyframes pop {
@@ -193,6 +212,11 @@ button {
 }
 
 @media (max-width: 480px) {
+  header h1 {
+    transform: translateX(0px);
+    margin: 0 auto;
+  }
+
   .body {
     overflow: visible;
   }
