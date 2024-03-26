@@ -237,6 +237,11 @@ button {
 }
 
 @media (max-width: 480px) {
+  
+  header {
+    width: 90%;
+  }
+  
   header h1 {
     transform: translateX(0px);
     margin: 0 auto;

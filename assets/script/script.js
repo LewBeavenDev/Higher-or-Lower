@@ -57,9 +57,7 @@ function gameLoss () {
 }
 
 function gameWin () {
-  finalScore += totalScore;
   document.getElementById('finalScore').innerHTML = totalScore + bet;
-  console.log(finalScore);
   winScreen.style.visibility = 'visible';
   winScreen.style.animation = 'pop 0.2s ease';
 }
@@ -78,7 +76,7 @@ playAgainBtnWin.addEventListener('click', initGame);
 function createDeck() {
   for (let suit in suits) {
     for (let rank in ranks) {
-      deck.push(`${ranks[rank]["label"]}_of_${suits[suit]}`);
+      deck.push(`${ranks[rank].label}_of_${suits[suit]}`);
     }
   }
   return deck;
@@ -142,10 +140,11 @@ function dealNewCard() {
 function getCardValue(card) {
   const label = card.split("_")[0];
   let cardValue = 0;
+  
   for (let rank in ranks) {
     const currentRank = ranks[rank];
-    if (currentRank["label"] === label) {
-      cardValue = currentRank["value"];
+    if (currentRank.label === label) {
+      cardValue = currentRank.value;
       break;
     }
   }
@@ -230,7 +229,7 @@ let buttons = document.querySelectorAll("button");
 
 buttons.forEach(button => {
   button.addEventListener("click", playButtonSound);
-})
+});
 
 function playButtonSound() {
   buttonSound.currentTime = 0;
