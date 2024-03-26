@@ -61,7 +61,7 @@ function gameWin () {
   document.getElementById('finalScore').innerHTML = totalScore + bet;
   console.log(finalScore);
   winScreen.style.visibility = 'visible';
-  winScreen.style.animation = 'pop 0.2s ease'
+  winScreen.style.animation = 'pop 0.2s ease';
 }
 
 // play again win/lose button selector
@@ -229,7 +229,7 @@ const buttonSound = document.getElementById('buttonSound');
 let buttons = document.querySelectorAll("button");
 
 buttons.forEach(button => {
-  button.addEventListener("click", playButtonSound)
+  button.addEventListener("click", playButtonSound);
 })
 
 function playButtonSound() {
