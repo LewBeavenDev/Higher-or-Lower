@@ -138,3 +138,12 @@ Higher or Lower is a card game where you guess whether the next card is higher o
 
 ## W3C HTML Validator
 
+<img src="assets\images\htmlValidator.png">
+
+- HTML passes with no errors or warnings to show. 
+
+## W3C CSS Validator
+
+<img src="">
+
+- CSS passes with no errors or warnings to show.
