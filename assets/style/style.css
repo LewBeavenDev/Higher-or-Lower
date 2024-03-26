@@ -223,10 +223,7 @@ button {
   from { 
     color: #ffffff00; 
     border: #ffffff00;
-    background-color: #ffffff00;
-  }  
-  to {
-    
+    background-color: #00000000;
   }
 }
 
