@@ -2,7 +2,7 @@
 
 ## Milestone Project 2 - Interactive Front-End Site
 
-![Mockup Image](F:\LewBeavenDev\HigherOrLower\Higher-or-Lower\assets\images\mockup.png)
+<img src="assets\images\mockup.png">
 
 Higher or Lower is a card game where you guess whether the next card is higher or loer than the one you are shown. The player can bet points to try and get the highest score possible.
 
@@ -12,7 +12,7 @@ Higher or Lower is a card game where you guess whether the next card is higher o
 
 ## Repository
 
-![View The Repository Here]()
+[View The Repository Here](https://github.com/LewBeavenDev/Higher_or_Lower?tab=readme-ov-file)
 
 ## Site Owner Goals
 
@@ -31,7 +31,8 @@ Higher or Lower is a card game where you guess whether the next card is higher o
 
 ### Color Scheme
 
-![](assets\images\higher_or_lower_palette.png)
+
+<img src="assets\images\higher_or_lower_palette.png">
 
 - The color palette of the page is inspired by casino/online poker tables. Dark background with a bright green felt color table keeping the users eyes on what is important. Bright differently colored buttons to highlight to the user the difference and function. 
 
@@ -48,7 +49,7 @@ Higher or Lower is a card game where you guess whether the next card is higher o
 
 ## Wireframes 
 
-![](assets\images\higherOrLowerWireFrame.png)
+<img src="assets\images\higherOrLowerWireFrame.png">
 
 - My wireframe was made in Figma
 
@@ -56,7 +57,7 @@ Higher or Lower is a card game where you guess whether the next card is higher o
 
 ## Landing/Welcome Page
 
-![](assets\images\landingPage.png)
+<img src="assets\images\landingPage.png">
 
 - The landing page instantly welcomes you to the page and explains the rules of the game and how it works.
 - Due to there only being one page on the website the site doesnt have a traditional nav bar, instead a header that functions as a button which resets the page for the user. 
@@ -65,7 +66,7 @@ Higher or Lower is a card game where you guess whether the next card is higher o
 
 ## Game Page Features
 
-![](assets\images\gamePage.png)
+<img src="assets\images\gamePage.png">
 
 - The play area has the main card area showing the user the card drawn. This is generated through various arrays and properly shuffled and the result is assigned the corresponding card .svg to show the user the card drawn. 
 - Underneath are the user interface buttons. Both sides are differently colored so the user subconsciously understands the two pairs of buttons are for different things. 
@@ -75,7 +76,7 @@ Higher or Lower is a card game where you guess whether the next card is higher o
 
 ## Lose Screen Features
 
-![](assets\images\lossScreen.png)
+<img src="assets\images\lossScreen.png">
 
 - The game loss screen is clearly colored red to show to the user that they have lost.
 - Underneath the title it explains why the user lost in case they didnt understand.
@@ -83,7 +84,7 @@ Higher or Lower is a card game where you guess whether the next card is higher o
 
 ## Win Screen Features
 
-![](assets\images\winScreen.png)
+<img src="assets\images\winScreen.png">
 
 - The game win screen is colored blue to reflect the game loss sceen. 
 - The game win screen shows the users score so they can keep track of how well they have done. 
@@ -125,9 +126,9 @@ Higher or Lower is a card game where you guess whether the next card is higher o
 ## Frameworks and Libraries
 
 - No Javascript or CSS libraries or frameworks were used in this project as to further develop my understanding of the fundamentals. 
-- ![Google Fonts](https://fonts.google.com/)
+- [Google Fonts](https://fonts.google.com/)
   - Google fonts was used to import one font 'Open sans'.
-- ![Figma](https://www.figma.com/)
+- [Figma](https://www.figma.com/)
   - Figma was used for the wireframes. 
-- ![Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/)
+- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/)
   - Firefox developer tools was used to debug and test responsiveness through development. The console was also used to debug the JavaScript through development. 
