@@ -113,7 +113,7 @@ button {
 .btn {
   height: 3.5rem;
   width: 12ch;
-  color: #000000;
+  color: #fff;
   font-weight: 800;
   letter-spacing: 1px;
   font-size: 1rem;
@@ -138,7 +138,7 @@ button {
 
 .btn:hover {
   transform: scale(1.05);
-  box-shadow: 1px 10px 5px;
+  box-shadow: 1px 10px 5px black;
 }
 
 .btn:active {
