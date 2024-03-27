@@ -264,8 +264,8 @@ button {
   }
 
   .welcomeScreen {
-    transform: translateY(-800px);
-    width: 300px;
+    transform: translateY(-950px);
+    width: 350px;
     height: min-content;
     padding: 20px; 
     overflow: visible;   
