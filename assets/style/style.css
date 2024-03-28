@@ -55,7 +55,7 @@ body {
   color: white;
   background: radial-gradient(#000000 25%, #252525);
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 main {
@@ -166,6 +166,12 @@ button {
   width: 100px;
 }
 
+.popup{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .loseScreen {
   z-index: 1000;
   border: 3px solid white;
@@ -175,9 +181,10 @@ button {
   margin: 0 auto;
   padding: 0.5rem 2rem;
   text-align: center;
-  transform: translateY(-200%);
+  transform: translateY(-100%);
   animation-name: losePop;
   animation-duration: .5s;
+  position: absolute;
 }
 
 .winScreen {
@@ -189,7 +196,8 @@ button {
   margin: 0 auto;
   padding: 0.5rem 2rem;
   text-align: center;
-  transform: translateY(-250%);
+  position: absolute;
+  transform: translateY(-100%);
 }
 
 .welcomeScreen {
@@ -199,12 +207,15 @@ button {
   height: 35rem;
   border-radius: 1rem;
   background-color: rgba(10, 70, 15, 0.97);
-  margin: 0 auto;
   padding: 2rem 4rem;
   text-align: center;
-  transform: translateY(-150%);
+  transform: translateY();
   animation-name: pop;
   animation-duration: .5s;
+  position: absolute;
+  top: 190px;
+
+
 }
 
 .welcomeScreen h2 {

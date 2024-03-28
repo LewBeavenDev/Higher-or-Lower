@@ -36,38 +36,40 @@
           <button class="lowerBtn btn" id="lowerBtn">Lower</button>
         </div>
       </div>
+      <div class="popup">
+        <div class="loseScreen container" id="loseScreen">
+          <h1>You Lose! :( </h1>
+          <p>You ran out of money!</p>
+          <br>
+          <button class="btn playAgainButton" id="playAgainBtnWin">Play Again</button>
+        </div>
+        <div class="winScreen container" id="winScreen">
+          <h1>Game Over! :) </h1>
+          <p>Your score is:</p>
+          <p id="finalScore"></p>
+          <br>
+          <button class="btn playAgainButton" id="playAgainBtnLose">Play Again</button>
+        </div>
+        <div class="welcomeScreen container" id="welcomeScreen">
+          <h2>Welcome to Higher or Lower.</h2>
+          <h3>A game by LewBeavenDev.</h3>
+          <br>
+          <br>
+          <h4>Game Rules:</h4>
+          <ul>
+            <li>The aim of the game is to achieve the highest score possible with one deck of cards.
+            </li>
+            <li>Bet either 'Higher' or 'Lower' as to whether or not the next card dealt, will be higher or lower than the first one dealt.</li>
+            <li>Increase or decrease based on how sure you are of the outcome to maximise your score.</li>
+            <li>Ace is high.</li>
+            <li>The game ends when your score reaches 0 or the last card in the deck is drawn.</li>
+          </ul>
+          <br>
+          <audio src="assets/sounds/uiClick.mp3" id="buttonSound"></audio>
+          <button class="btn firstPlayBtn" id="firstPlayBtn" >Play</button>          
+        </div>
+      </div>
       
-      <div class="loseScreen container" id="loseScreen">
-        <h1>You Lose! :( </h1>
-        <p>You ran out of money!</p>
-        <br>
-        <button class="btn playAgainButton" id="playAgainBtnWin">Play Again</button>
-      </div>
-      <div class="winScreen container" id="winScreen">
-        <h1>Game Over! :) </h1>
-        <p>Your score is:</p>
-        <p id="finalScore"></p>
-        <br>
-        <button class="btn playAgainButton" id="playAgainBtnLose">Play Again</button>
-      </div>
-      <div class="welcomeScreen container" id="welcomeScreen">
-        <h2>Welcome to Higher or Lower.</h2>
-        <h3>A game by LewBeavenDev.</h3>
-        <br>
-        <br>
-        <h4>Game Rules:</h4>
-        <ul>
-          <li>The aim of the game is to achieve the highest score possible with one deck of cards.
-          </li>
-          <li>Bet either 'Higher' or 'Lower' as to whether or not the next card dealt, will be higher or lower than the first one dealt.</li>
-          <li>Increase or decrease based on how sure you are of the outcome to maximise your score.</li>
-          <li>Ace is high.</li>
-          <li>The game ends when your score reaches 0 or the last card in the deck is drawn.</li>
-        </ul>
-        <br>
-        <audio src="assets/sounds/uiClick.mp3" id="buttonSound"></audio>
-        <button class="btn firstPlayBtn" id="firstPlayBtn" >Play</button>          
-      </div>
       
     </main>
 

@@ -41,7 +41,7 @@ let suits = ["spades", "clubs", "hearts", "diamonds"];
 let discardedCards = [];
 let totalScore = 100;
 
-// hides welcome screen
+// shows welcome screen
 function hideWelcome() {
   document.getElementById('welcomeScreen').style.animation = "slideUp 1s ease-in forwards";
 }
