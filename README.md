@@ -215,13 +215,15 @@ I also tested this on my Google Pixel 4, an Ipad Pro, an iPhone 14 Pro Max and m
 
 # Peer Reviews
 
-In the final stages of development I got several family members and friends to test out the page and give feedback. The feedback received was as follows;
+In the final stages of development I got several family members and friends as well as my tutor to test out the page and give feedback. The feedback received was as follows;
 
 - Users would like a way to look back at instructions without the game resetting.
 
 - Users would like the ability to hold down bet increment buttons rather than having to click every time. 
 
 - Sometimes bet buttons can be pressed multiple times by accident so it seems like they have won/lost score out of nowhere as well as skipping a card or two. 
+
+- Maybe implement being able to bank the final score upon winning, to make the game a bit longer. 
 
 # Bugs 
 
