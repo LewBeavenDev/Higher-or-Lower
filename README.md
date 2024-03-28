@@ -240,6 +240,9 @@ In the final stages of development I got several family members and friends to t
   - I then worked out after pressing a button really fast and paying attention to when the sound would play again I realised that the sound couldn't play until the sound currently playing had finished. I needed a way to reset the sound to the start on every button press. So I went to Google. 
   - I found that by simply implementing 'sound.currentTime=0' you could do exaclty what was needed. So I implemented this and resolved the bug. 
 
+  - No scroll on mobile landscape view
+  - Fixed this by inserting 'overflow-x: hidden;' so only a verticsal scroll bar will work therefore allowing the game to function in landscape mode.
+
 ## Unresolved 
 
 - Lighthouse 
@@ -249,8 +252,7 @@ In the final stages of development I got several family members and friends to t
   - I have 4 warnings from the JSHint Validator as shown above. 
   - Upon changing the code to correct the issues I lose the ability to have the current card show up. 
 
-- No scroll on mobile landscape view
-  - The ability to have this implemented would improve user experience. 
+
 
 # Deployment
 
