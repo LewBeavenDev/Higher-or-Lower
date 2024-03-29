@@ -250,7 +250,8 @@ button {
 @media (max-width: 480px) {
   
   header {
-    width: 90%;
+    width: auto;
+    text-align: center;
   }
   
   header h1 {
@@ -275,11 +276,9 @@ button {
   }
 
   .welcomeScreen {
-    transform: translateY(-950px);
-    width: 350px;
-    height: min-content;
-    padding: 20px; 
-    overflow: visible;   
+    width: auto;
+    height: auto;
+    padding: 30px;
   }
 
   .winScreen {
